@@ -12,7 +12,7 @@ const Tarea = ({tarea, completarTarea, eliminarTarea}) => {
               <TableCell align="center">{tarea.nombre}</TableCell>
               <TableCell align="center">{tarea.descripcion}</TableCell>
               <TableCell align="center">  
-                <Button variant="contained" onClick={() => completarTarea(tarea.id)}>{tarea.completado ? 'REGRESAR' : 'COMPLETAR' }</Button>
+                <Button variant="contained" onClick={() => completarTarea(tarea.id)}>{tarea.completado ? 'NO COMPLETAR' : 'COMPLETAR' }</Button>
               </TableCell>
               <TableCell align="center">
                 <Button variant="contained" onClick={() => eliminarTarea(tarea.id)}>Eliminar Tarea</Button>

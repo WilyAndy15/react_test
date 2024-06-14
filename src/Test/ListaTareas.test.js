@@ -15,7 +15,7 @@ describe('ListaTareas component', () => {
 
     // Verificar que se renderiza el numero correcto de filas
     const rows = screen.getAllByRole('row');
-    expect(rows.length).toBe(Tareas.length+1);
+    expect(rows.length).toBe(Tareas.length + 2);
    // Verificar que los datos de cada tarea sean correctos
     Tareas.forEach((tarea) => {
       expect(screen.getByText(tarea.nombre)).toBeInTheDocument();

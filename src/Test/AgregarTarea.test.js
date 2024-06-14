@@ -14,6 +14,7 @@ describe('AgregarTarea component', () => {
     const descripcion = screen.getByLabelText('Descripcion');
     const botonAgregar = screen.getByRole('button', { name: /Agregar Tarea/i });
 
+    // Simula el ingreso de valores y el clic al boton
     fireEvent.change(nombre, { target: { value: 'Nueva Tarea' } });
     fireEvent.change(descripcion, { target: { value: 'Descripcion' } });
     fireEvent.click(botonAgregar);

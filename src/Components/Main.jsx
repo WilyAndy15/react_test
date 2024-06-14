@@ -42,7 +42,7 @@ const Main = () => {
     setTareas(nuevaLista);
   };
 
-  // Interfaz main que llama a componentes hijos (Agregar Tarea, ListaTareas) se pasan PROPS (tareas, agregarTarea, completarTarea, eliminarTarea)
+  // Interfaz Main que llama a componentes hijos (Agregar Tarea, ListaTareas) se pasan PROPS (tareas, agregarTarea, completarTarea, eliminarTarea)
   return (
     <>
       <AppBar style={{ alignItems: 'center' }}>
@@ -52,8 +52,10 @@ const Main = () => {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Container style={{ padding: '3%'}}>
+      <Container style={{ padding: '3%', width: '800px', height: '200px'}}>
       <AgregarTarea agregarTarea={agregarTarea}/>
+      </Container>
+      <Container style={{ padding: '3%', alignItems: 'center'}}>
       { tareas.length > 0 && (<ListaTareas tareas={tareas} completarTarea={completarTarea} eliminarTarea={eliminarTarea} />)}
       </Container>
     </>
